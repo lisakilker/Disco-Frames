@@ -7,11 +7,11 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 
   const nextId = idAsNumber + 1
 
-  if(idAsNumber === 7){
+  if(idAsNumber === 9){
       return new NextResponse(`<!DOCTYPE html><html><head>
-    <title>This is frame 7</title>
+    <title>This is frame 9</title>
     <meta property="fc:frame" content="vNext" />
-    <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmV71pbn9CBjZ5WS39EtfY9Rn15EuFLsN49xomQ29a8Txc/Image7.jpeg" />
+    <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmcRcX18Srz65MNVpzTjcneaT8wraHqBfkPAYJLfJ4hC8c/Image9.jpeg" />
     <meta property="fc:frame:button:1" content="Create AI Images" />
     <meta property="fc:frame:button:1:action" content="post_redirect" />
     <meta property="fc:frame:button:2" content="Learn Frames" />
@@ -24,7 +24,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   return new NextResponse(`<!DOCTYPE html><html><head>
     <title>This is frame ${id}</title>
     <meta property="fc:frame" content="vNext" />
-    <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmV71pbn9CBjZ5WS39EtfY9Rn15EuFLsN49xomQ29a8Txc/Image${id}.jpeg" />
+    <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmcRcX18Srz65MNVpzTjcneaT8wraHqBfkPAYJLfJ4hC8c/Image${id}.jpeg" />
     <meta property="fc:frame:button:1" content="Next Image" />
     <meta property="fc:frame:post_url" content="${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=${nextId}" />
   </head></html>`);
